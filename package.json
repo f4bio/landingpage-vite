@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "npx vite",
     "build": "npx tsc && npx vite build",
+    "build:dev": "npx tsc && npx vite build --minify=false --debug",
     "preview": "npx vite preview",
     "lint": "npm run lint:eslint && npm run lint:stylelint",
     "lint:stylelint": "npx stylelint \"**/*.css\"",
@@ -14,9 +15,15 @@
     "test": "echo TODO"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.4.2",
+    "@fortawesome/free-brands-svg-icons": "^6.4.2",
+    "@fortawesome/free-solid-svg-icons": "^6.4.2",
+    "feather-icons": "^4.29.1",
+    "nanosplash": "^3.0.0",
     "typewriter-effect": "^2.20.1"
   },
   "devDependencies": {
+    "@types/postcss-import": "^14.0.0",
     "@typescript-eslint/eslint-plugin": "^6.5.0",
     "@typescript-eslint/parser": "^6.5.0",
     "autoprefixer": "^10.4.15",
@@ -24,11 +31,14 @@
     "eslint-config-prettier": "^9.0.0",
     "hack-font": "^3.3.0",
     "marked": "^8.0.0",
+    "postcss": "^8.4.29",
     "postcss-import": "^15.1.0",
     "postcss-nested": "^6.0.1",
     "prettier": "3.0.3",
+    "spinkit": "^2.0.1",
     "stylelint": "^15.10.3",
     "stylelint-config-standard": "^34.0.0",
+    "tailwindcss": "^3.3.3",
     "typescript": "^5.2.2",
     "vite": "^4.4.9"
   }
