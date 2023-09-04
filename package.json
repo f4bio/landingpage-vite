@@ -1,15 +1,30 @@
 {
-  "name": "vite-typescript-starter",
+  "name": "landingpage-vite",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc && vite build",
-    "preview": "vite preview"
+    "dev": "npx vite",
+    "build": "npx tsc && npx vite build",
+    "preview": "npx vite preview"
+  },
+  "dependencies": {
+    "inkscribe.js": "^1.0.0",
+    "typeit": "^8.7.1",
+    "typewriter-effect": "^2.20.1"
   },
   "devDependencies": {
-    "typescript": "^5.0.2",
+    "autoprefixer": "^10.4.15",
+    "eslint": "^8.48.0",
+    "eslint-config-prettier": "^9.0.0",
+    "hack-font": "^3.3.0",
+    "marked": "^8.0.0",
+    "postcss-import": "^15.1.0",
+    "postcss-nested": "^6.0.1",
+    "prettier": "3.0.3",
+    "stylelint": "^15.10.3",
+    "stylelint-config-standard": "^34.0.0",
+    "typescript": "^5.2.2",
     "vite": "^4.4.9"
   }
 }
