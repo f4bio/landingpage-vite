@@ -6,14 +6,19 @@
   "scripts": {
     "dev": "npx vite",
     "build": "npx tsc && npx vite build",
-    "preview": "npx vite preview"
+    "preview": "npx vite preview",
+    "lint": "npm run lint:eslint && npm run lint:stylelint",
+    "lint:stylelint": "npx stylelint \"**/*.css\"",
+    "lint:eslint": "npx eslint --ext ts ./src",
+    "lint:fix": "npm run lint:stylelint -- --fix && npm run lint:eslint -- --fix",
+    "test": "echo TODO"
   },
   "dependencies": {
-    "inkscribe.js": "^1.0.0",
-    "typeit": "^8.7.1",
     "typewriter-effect": "^2.20.1"
   },
   "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^6.5.0",
+    "@typescript-eslint/parser": "^6.5.0",
     "autoprefixer": "^10.4.15",
     "eslint": "^8.48.0",
     "eslint-config-prettier": "^9.0.0",
