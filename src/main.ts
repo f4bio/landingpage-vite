@@ -5,18 +5,19 @@ import Typewriter from "typewriter-effect/dist/core";
 const typewriterElement = document.getElementById("typewriter");
 if(typewriterElement) {
   const typewriter = new Typewriter(typewriterElement, {
-    strings: ["Hello", "World"],
     autoStart: true,
-    loop: true,
+    loop: false,
     delay: 75,
   });
   typewriter
+    .pasteString("<span class='text-slate-100'>[</span>")
+    .pasteString("<span>iam</span>")
+    .pasteString("<span class='text-slate-100'>@</span>")
+    .pasteString("<span>f4b.io</span>")
+    .pasteString("<span class='text-slate-100'> ~]$</span> ")
     .pauseFor(2500)
-    .typeString("A simple yet powerful native javascript")
-    .pauseFor(300)
-    .deleteChars(10)
-    .typeString("<strong>JS</strong> plugin for a cool typewriter effect and ")
-    .typeString("<strong>only <span style='color: #27ae60;'>5kb</span> Gzipped!</strong>")
-    .pauseFor(1000)
+    .typeString("whoami | tree")
+    .pauseFor(2500)
+    .typeString("<br/>")
     .start();
 }

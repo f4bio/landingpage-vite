@@ -9,30 +9,33 @@
 </head>
 
 <body>
-  <div class="w-full h-full fixed top-0 left-0 bg-white opacity-75 z-50 hidden">
-    <div class="sk-wave">
-      <div class="sk-wave-rect"></div>
-      <div class="sk-wave-rect"></div>
-      <div class="sk-wave-rect"></div>
-      <div class="sk-wave-rect"></div>
-      <div class="sk-wave-rect"></div>
-    </div>
-  </div>
   <div id="app">
-    <div class="container">
-      <div class="box">
-        <div class="prompt">
-          [<span>iam</span>@<span>f4b.io</span> ~]$ whoami | tree
+    <div class="flex flex-col justify-center w-full h-full m-1">
+      <div class="sk-wave m-auto">
+        <div class="sk-wave-rect"></div>
+        <div class="sk-wave-rect"></div>
+        <div class="sk-wave-rect"></div>
+        <div class="sk-wave-rect"></div>
+        <div class="sk-wave-rect"></div>
+      </div>
+    </div>
+    <div class="flex flex-col justify-center w-full h-full m-1 hidden">
+      <div class="flex-none">
+        <header>empty header</header>
+      </div>
+      <div class="grow mt-80">
+        <div class="box">
+          <div class="prompt">
+            <span id="typewriter"></span>
+          </div>
         </div>
       </div>
-      <div class="row center-xs center-lg bottom-xs bottom-lg">
-        <div class="col-lg-12 col-xs-12">
-          <footer class="box">based on
-            <a href="https://www.reddit.com/user/nytly">/u/nytly</a>'s awesome
-            <a href="https://www.reddit.com/r/startpages/comments/f6hfoq/term_tree/">
-              start page</a> | thanks bro!
-          </footer>
-        </div>
+      <div class="flex-none">
+        <footer class="box">based on
+          <a href="https://www.reddit.com/user/nytly">/u/nytly</a>'s awesome
+          <a href="https://www.reddit.com/r/startpages/comments/f6hfoq/term_tree/">
+            start page</a> | thanks bro!
+        </footer>
       </div>
     </div>
   </div>
