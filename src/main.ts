@@ -1,28 +1,18 @@
 import "./style.css";
 import "feather-icons";
 import Typewriter from "typewriter-effect/dist/core";
-
-function hideSplashscreen() {
-  const splashscreenContainer = document.getElementById("splashscreen");
-  const contentContainer = document.getElementById("content");
-
-  splashscreenContainer?.classList.add("hidden");
-  splashscreenContainer?.classList.remove("flex");
-
-  contentContainer?.classList.remove("hidden");
-  contentContainer?.classList.add("flex");
-}
+import { hideSplashscreen } from "./util";
 
 setTimeout(() => {
   hideSplashscreen();
 }, 3000);
 
 const typewriterElement = document.getElementById("typewriter");
+const outputResultElement = document.getElementById("output-result");
 if(typewriterElement) {
   const typewriter = new Typewriter(typewriterElement, {
-    autoStart: true,
     loop: false,
-    delay: 75,
+    delay: "natural"
   });
   typewriter
     .pasteString("<span class='text-slate-100'>[</span>")
@@ -32,7 +22,10 @@ if(typewriterElement) {
     .pasteString("<span class='text-slate-100'> ~]$</span> ")
     .pauseFor(2500)
     .typeString("whoami | tree")
-    .pauseFor(2500)
-    .typeString("<br/>")
-    .start();
+    .pauseFor(1000)
+    .callFunction(() => {
+      outputResultElement?.classList.remove("hidden");
+      typewriter.stop();
+    });
+    typewriter.start();
 }
