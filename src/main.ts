@@ -2,6 +2,21 @@ import "./style.css";
 import "feather-icons";
 import Typewriter from "typewriter-effect/dist/core";
 
+function hideSplashscreen() {
+  const splashscreenContainer = document.getElementById("splashscreen");
+  const contentContainer = document.getElementById("content");
+
+  splashscreenContainer?.classList.add("hidden");
+  splashscreenContainer?.classList.remove("flex");
+
+  contentContainer?.classList.remove("hidden");
+  contentContainer?.classList.add("flex");
+}
+
+setTimeout(() => {
+  hideSplashscreen();
+}, 3000);
+
 const typewriterElement = document.getElementById("typewriter");
 if(typewriterElement) {
   const typewriter = new Typewriter(typewriterElement, {
