@@ -34,15 +34,15 @@ docker build \
   --build-arg BUILD_DATE=$(date -u +'%Y-%m-%dT%H:%M:%SZ') \
   --build-arg BUILD_VERSION="2.0.0" \
   --file Dockerfile \
-  --tag f4bio/landingpage:latest \
+  --tag [registry.digitalocean.com/]f4bio/landingpage:latest \
   --no-cache \
   .
 ```
 
 ### docker push
 
-`$ docker push f4bio/landingpage`
+`$ docker push [registry.digitalocean.com/]f4bio/landingpage:latest`
 
 ### docker run
 
-`$ docker run --rm f4bio/landingpage:latest`
+`$ docker run --rm [registry.digitalocean.com/]f4bio/landingpage:latest`
