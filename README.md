@@ -3,16 +3,15 @@
 > _a basic term-like start page with tree structure_
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
-
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
-## Table of Contents
-
 - [generate ascii image](#generate-ascii-image)
-- [build](#build)
-  - [build page](#build-page)
-  - [build docker image](#build-docker-image)
-  - [push docker image](#push-docker-image)
+- [dev](#dev)
+  - [dev run](#dev-run)
+- [prod](#prod)
+  - [docker build](#docker-build)
+  - [docker push](#docker-push)
+  - [docker run](#docker-run)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -20,16 +19,30 @@
 
 `$ jp2a --width=64 src/profile.jpg`
 
-## build
+## dev
 
-### build page
+### dev run
 
-`$ npm run lint:fix && npm run build:prod`
+`$ npm run dev`
 
-### build docker image
+## prod
 
-`$ docker build --no-cache -t f4bio/landingpage:latest .`
+### docker build
 
-### push docker image
+```bash
+docker build \
+  --build-arg BUILD_DATE=$(date -u +'%Y-%m-%dT%H:%M:%SZ') \
+  --build-arg BUILD_VERSION="2.0.0" \
+  --file Dockerfile \
+  --tag f4bio/landingpage:latest \
+  --no-cache \
+  .
+```
+
+### docker push
 
 `$ docker push f4bio/landingpage`
+
+### docker run
+
+`$ docker run --rm f4bio/landingpage:latest`

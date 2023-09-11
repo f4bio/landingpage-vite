@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "npx vite",
-    "build": "npx tsc && npx vite build",
+    "build": "npm run build:prod",
+    "build:prod": "npx tsc && npx vite build --minify=true",
     "build:dev": "npx tsc && npx vite build --minify=false --debug",
     "preview": "npx vite preview",
     "lint": "npm run lint:eslint && npm run lint:stylelint",
