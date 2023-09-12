@@ -18,23 +18,22 @@
 }
 
 #app {
-  @apply w-full h-full fixed top-0 left-0;
+  @apply w-full h-full fixed top-0 left-0 text-xs antialiased;
 
   font-family: var(--font), system-ui, Avenir, Helvetica, Arial, sans-serif;
   color-scheme: light dark;
   color: var(--foreground);
   background-color: #242424;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   margin: 0;
   display: flex;
   place-items: center;
 }
 
 h1 {
+  @apply text-sm;
+
   display: inline;
   font-family: var(--font);
-  font-size: 1rem;
   font-weight: normal;
   color: var(--light);
 }
@@ -117,9 +116,10 @@ input {
 }
 
 footer {
+  @apply text-xs;
+
   display: block;
   margin-top: 1rem;
-  font-size: 0.7em;
   position: sticky;
   left: 0;
   bottom: 0;
@@ -157,9 +157,10 @@ a:hover {
 }
 
 .ascii-output {
+  @apply text-xs;
+
   font-family: var(--font);
   color: var(--foreground);
-  font-size: 8pt;
   font-weight: bold;
 }
 
@@ -196,10 +197,11 @@ a:hover {
 }
 
 button {
+  @apply text-xs;
+
   border-radius: 8px;
   border: 1px solid transparent;
   padding: 0.6em 1.2em;
-  font-size: 1em;
   font-weight: 500;
   font-family: inherit;
   background-color: #1a1a1a;
